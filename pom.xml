@@ -21,6 +21,11 @@
       <version>${javafx.version}</version>
     </dependency>
   </dependencies>
+
+<modules>
+  <module>server</module>
+  <module>java file</module>
+</modules>
   
   <build>
     <plugins>
