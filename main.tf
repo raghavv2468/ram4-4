@@ -13,11 +13,10 @@ resource "aws_instance" "demo" {
 }
 
 
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "raghava123"  # Ensure the bucket name is globally unique
+ resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-unique-bucket-name-123456"  # Ensure this name is globally unique
   acl    = "private"
 }
-
 
 resource "aws_dynamodb_table" "my_table" {
   name           = "my-table22"
