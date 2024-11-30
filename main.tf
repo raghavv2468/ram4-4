@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
   ami           = "ami-12345678"
   instance_type = "t2.micro"
   tags = {
-    Name = "raghava" # Using the unique identifier as the name
+    Name = "raghava123" # Using the unique identifier as the name
   }
 }
 
