@@ -14,7 +14,7 @@ resource "aws_instance" "demo" {
 
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-unique-bucket-name-123"  # Ensure the bucket name is globally unique
+  bucket = "raghava123"  # Ensure the bucket name is globally unique
   acl    = "private"
 }
 
