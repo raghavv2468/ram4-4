@@ -12,3 +12,31 @@ resource "aws_instance" "demo" {
   }
 }
 
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-unique-bucket-name-123"  # Ensure the bucket name is globally unique
+  acl    = "private"
+}
+
+
+resource "aws_dynamodb_table" "my_table" {
+  name           = "my-table22"
+  billing_mode   = "PROVISIONED"  # You can also use "PAY_PER_REQUEST" if you prefer on-demand pricing
+  hash_key       = "id"
+  read_capacity  = 5
+  write_capacity = 5
+
+  attribute {
+    name = "id"
+    type = "S"  # 'S' stands for string
+  }
+  
+  tags = {
+    Name        = "my-table"
+    Environment = "production"
+  }
+}
+
+
+
+
